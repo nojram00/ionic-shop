@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Cart
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tab 3</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <app-explore-container name="Tab 3 page"></app-explore-container> -->
+
+  <h1 class="cart-header">Cart</h1>
+  <ion-list *ngIf="games?.length">
+    <ion-item *ngFor="let game of games">
+      <ion-label>
+        <h1>{{game.name}}</h1>
+        <p>₱{{game.price}}</p>
+      </ion-label>
+      <ion-img [src]="game.imageURI"></ion-img>
+      <ion-button color="primary">cancel order</ion-button>
+    </ion-item>
+  </ion-list>
+
+  <h1 class="Total">Total: ₱4000</h1>
+
+  <div class="buy-now">
+    
+    <ion-button color="primary" class="ion-margin-top buy-now-btn">
+      <h1>BUY NOW</h1>
+    </ion-button>
+  </div>
+ 
+
+</ion-content>

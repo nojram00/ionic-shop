@@ -1,0 +1,56 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Products
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tab 2</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <app-explore-container name="Tab 2 page"></app-explore-container> -->
+
+  <!-- <ion-list *ngIf="games?.length">
+    <ion-label *ngFor="let game of games">
+      <ion-item>
+        <div class="info">
+          <h1>{{game.name}}</h1>
+          <p>₱{{game.price}}</p>
+          <h4>Platforms</h4>
+          <p>{{game.platforms}}</p>
+        </div>
+      </ion-item>
+    </ion-label>
+  </ion-list> -->
+
+  <ion-list *ngIf="games?.length">
+    <app-game-storecomp 
+    *ngFor="let game of games"
+    [game]="game"
+    [routerLink]="['/','tabs','Games','gamedetails', game.id]">
+    </app-game-storecomp>
+  </ion-list>
+
+  <h1>Playstation 5 Games</h1>
+  <ion-list *ngIf="ps5Games?.length">
+    <app-game-storecomp
+      *ngFor="let ps5game of ps5Games"
+      [game]="ps5game"
+      [routerLink]="['/','tabs','Games','gamedetails', ps5game.id]">
+    </app-game-storecomp>
+  </ion-list>
+ 
+  <h1>Nintendo Switch Games</h1>
+  <ion-list *ngIf="nintendoswitchGames?.length">
+    <app-game-storecomp
+      *ngFor="let nswitch of nintendoswitchGames"
+      [game]="nswitch"
+      [routerLink]="['/','tabs','Games','gamedetails', nswitch.id]">
+    </app-game-storecomp>
+  </ion-list>
+</ion-content>

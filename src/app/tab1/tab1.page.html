@@ -1,0 +1,48 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-slides [options] = "option" class="ion-margin-top">
+
+    <!-- Problema nga lang mawawala yung autoplay pag nag-navigate ka sa other tabs... -->
+    <ion-slide>
+      <ion-card>
+        <ion-img src="assets/imgCards/takoyaki.png" alt=""></ion-img>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+        <ion-img src="assets/imgCards/ramenAd.png" alt=""></ion-img>
+      </ion-card>
+    </ion-slide>
+
+  </ion-slides>
+  
+
+
+    <h1>Discounted for you</h1>
+    <ion-list *ngIf="games?.length">
+      <app-game-storecomp 
+      *ngFor="let game of games"
+      [game]="game"
+      [routerLink]="['/','tabs','Games','gamedetails', game.id]">
+      </app-game-storecomp>
+    </ion-list>
+
+    <h1>New Games</h1>
+    <ion-list *ngIf="newGames?.length">
+      <app-game-storecomp 
+      *ngFor="let game of newGames"
+      [game]="game"
+      [routerLink]="['/','tabs','Games','gamedetails', game.id]">
+      </app-game-storecomp>
+    </ion-list>
+</ion-content>
+

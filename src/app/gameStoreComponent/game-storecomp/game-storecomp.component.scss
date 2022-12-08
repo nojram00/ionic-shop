@@ -1,0 +1,33 @@
+body{
+    background-color: rgb(94, 127, 219);
+}
+.list-image{
+    width: 50px;
+    height: 50px;
+    float: right;
+}
+.info{
+    width: 50%;
+    float: left;
+}
+.info h1{
+    text-overflow: clip;
+}
+ion-list{
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.image-container {
+    width: 50%;
+    float: right;
+    display: flex;
+    align-content: center;
+    justify-content: flex-end;
+}
+.info-image{
+    padding: 20px 20px;
+    height: 360px;
+    width: 360px;
+}

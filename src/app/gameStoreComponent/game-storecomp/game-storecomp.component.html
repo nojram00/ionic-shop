@@ -1,0 +1,28 @@
+
+<!-- <ion-list *ngIf="games?.length">
+  <ion-label *ngFor="let game of games">
+    <ion-item>
+      <div class="info">
+        <h1>{{game.name}}</h1>
+        <p>₱{{game.price}}</p>
+        <h4>Platforms</h4>
+        <p>{{game.platforms}}</p>
+      </div>
+    </ion-item>
+  </ion-label>
+</ion-list> -->
+
+
+  <ion-item>
+    <div class="info">
+      <h1>{{game.name}}</h1>
+      <p>₱{{game.price}}</p>
+      <h4>Platforms</h4>
+      <p>{{game.platforms}}</p>
+    </div>
+    <div class="image-container">
+      <!-- <img src="" alt="" class="list-image"> -->
+      <ion-img [src]="[game.imageURI]" alt="" class="info-image"></ion-img>
+    </div>
+
+  </ion-item>

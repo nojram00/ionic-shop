@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{game?.name}}</ion-title>
+    <!-- <a slot="start">
+      <ion-back-button defaultHref="/tabs/Games"></ion-back-button>
+    </a> -->
+    <ion-button fill="clear" color="dark" slot="start" (click)="back()"><ion-icon name="arrow-back"></ion-icon></ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="image-container">
+    <ion-img [src]="game.imageURI" class="info-image"></ion-img>
+  </div>
+  <div class="info-header">
+    <h1>{{game?.name}}</h1>
+    <h3>{{game?.platforms}}</h3>
+    <h3>₱ {{game?.price}}</h3>
+  </div>
+  <div class="info-desc">
+  <h1>Description</h1>
+
+  <p>
+    {{game?.description}}
+  </p>
+
+  <h5>Release Date: {{game?.date}}</h5>
+  </div>
+
+    <ion-button color="primary">Add to Cart</ion-button>
+</ion-content>

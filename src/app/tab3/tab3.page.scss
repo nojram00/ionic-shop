@@ -1,0 +1,27 @@
+ion-list{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+ion-img{
+    width: 100px;
+    height: 120px;
+    margin-right: 10px;
+}
+.buy-now{
+   display: flex;
+   justify-content: center;
+}
+.buy-now-btn{
+    width: 150px;
+    height: 50px;
+}
+.buy-now-btn h1{
+    font-size: 20px;
+    font-weight: 200;
+    text-align: center;
+    line-height: 150px;
+    margin-bottom: 20px;
+}
+.Total, .cart-header{
+    margin-left: 20px;
+}
